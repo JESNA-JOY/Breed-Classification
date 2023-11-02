@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="{{ image_url }}" class="img-fluid" alt="Uploaded Image">
+    </div>
+    <div class="col-sm-6">
+      <h2>Label: {{ label }}</h2>
+      <h2>Breed: {{ breed }}</h2>
+      <a href="{% url 'home' %}" class="btn btn-primary">New Search</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classifier</title>
+</head>
+<body>
+    <h1>Image Classifier</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        // Load the stored image data from local storage
+        var imageData = localStorage.getItem("uploaded-image");
+        if (imageData) {
+            // Set the source of the uploaded image tag to the stored image data
+            document.getElementById("uploaded-image").src = imageData;
+        }
+    </script>
+</body>
+</html>
